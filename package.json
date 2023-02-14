@@ -1,0 +1,13 @@
+{
+  "name": "annalise-release-candidate-dispatch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LachlanNewman/annalise-release-candidate-dispatch.git",
+  "author": "LachlanNewman <lachnewman007@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "octokit": "^2.0.14"
+  }
+}
