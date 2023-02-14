@@ -2,10 +2,10 @@
 import {Octokit} from 'octokit'
 import core from '@actions/core';
 
-async function main(auth,doc,repo,rc){
+async function main(token,doc,repo,rc){
     JSON.parse(rc)
 
-    const octokit = new Octokit({auth})
+    const octokit = new Octokit({token})
       
     await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
         owner: 'annaliseai',
@@ -20,9 +20,9 @@ async function main(auth,doc,repo,rc){
       })
 }
 
-const auth = core.getInput('auth')
+const token = core.getInput('token')
 const doc = core.getInput('doc')
 const repo = core.getInput('repo')
 const rc = core.getInput('rc')
 
-main(auth,doc,repo,rc)
+main(token,doc,repo,rc)

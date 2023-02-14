@@ -1,15 +1,15 @@
 name: 'Annalise.AI Release Candidate Dispatch Action'
 description: 'Annalise.AI Release Candidate Dispatch Action'
 inputs:
-  auth:
+  token:
     description: 'PAT'
-    required: true
+    default: ${{ github.token }}
   doc:
     description: 'Document to dispatch release to'
     required: true
   repo:
     description: 'Title of the service which has been released'
-    required: true
+    default: ${{ github.repository }}
   rc:
     description: 'JSON String of required information'
     required: true
