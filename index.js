@@ -15,7 +15,7 @@ async function main(auth,doc,repo,rc){
         inputs: {
           doc,
           repo,
-          rc: JSON.stringify(releaseCandidate)
+          rc: JSON.stringify(rc)
         }
       })
 }
