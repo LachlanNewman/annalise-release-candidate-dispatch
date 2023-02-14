@@ -3,6 +3,7 @@ description: 'Annalise.AI Release Candidate Dispatch Action'
 inputs:
   auth:
     description: 'PAT'
+    required: true
   doc:
     description: 'Document to dispatch release to'
     required: true
